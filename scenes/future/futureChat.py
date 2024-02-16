@@ -3,7 +3,7 @@ from utils import messageLine, enterToContinue, responseDecision, cls, title, wr
 
 ending = False
 
-messages = []
+messages = [] # data abstraction
 
 
 def addAndWriteMessage(username, message):
@@ -56,17 +56,21 @@ def warningTheXPandemic():
     addAndWriteMessage(
         "cutieneko", "ohh u bypassed the censorship, that's smart")
     addAndWriteMessage("cutieneko",
-                       "remember I mentioned the X pandemic that would change our history?")
+                       "remember I mentioned the X pandemic that would change our hist"
+                       "ory?")
     addAndWriteMessage("cutieneko", "u should be prepared for that!")
     addAndWriteMessage(
         username, "X? u mean covid? man that was a nightmare")
     addAndWriteMessage(
         "cutieneko", "no, another one after the covid")
-    responseOption = 0
+    responseOption, response = 0, ""
     while responseOption not in [1, 2]:
         responseOption, response = responseDecision(username,
-                                                    ["be real bro there's no other pandemic. stop the cap",
-                                                     "ok... i have some masks are stuff from covid so maybe i should be prepared"])
+                                                    ["be real bro there's no other pand"
+                                                     "emic. stop the cap",
+                                                     "ok... i have some masks are stuf"
+                                                     "f from covid so maybe i should b"
+                                                     "e prepared"])
     messages.append(response)
     nahBroNoX() if responseOption == 1 else happyEnding()
 
@@ -76,15 +80,18 @@ def talkingAbout2112():
     addAndWriteMessage(
         "cutieneko", "man it's 2112! u dont know this? r u trapped behind?")
     addAndWriteMessage(username,
-                       "no it's freaking 2024 rn! is this a kind of joke on this platform?")
+                       "wdym trapped behind? is this a kind of joke on this platf"
+                       "orm?")
     addAndWriteMessage("cutieneko", "bro... hear me out... ")
     addAndWriteMessage(
         "cutieneko", "i think something is real wrong with this.")
     addAndWriteMessage("cutieneko", "what year are you in?")
-    responseOption = 0
+    responseOption, response = 0, ""
     while responseOption not in [1, 2]:
         responseOption, response = responseDecision(username,
-                                                    ["2024. trust me, i'm not kidding", "it's been 24 years into the 3rd millennium"])
+                                                    ["2024. trust me, i'm not kidding", 
+                                                     "it's been 24 years into the 3rd "
+                                                     "millennium"])
     messages.append(response)
     accountTerminated() if responseOption == 1 else warningTheXPandemic()
 
@@ -100,11 +107,14 @@ def nekoLeaves():
 def howAboutYou():
     continuousMessages()
     addAndWriteMessage("cutieneko",
-                       "how about you? probably u r also using one without letting me know =)))")
-    responseOption = 0
+                       "how about you? probably u r also using one without letting me "
+                       "know =)))")
+    responseOption, response = 0, ""
     while responseOption not in [1, 2]:
         responseOption, response = responseDecision(username,
-                                                    ["nah i don't have one", "honestly, i have no idea what you are talking about"])
+                                                    ["nah i don't have one", "honestly"
+                                                     ", i have no idea what you are ta"
+                                                     "lking about"])
     messages.append(response)
     nekoLeaves() if responseOption == 1 else talkingAbout2112()
 
@@ -117,10 +127,12 @@ def talkingAboutBetaAnd60():
                        "nvm u know im texting u via the new apple vision 60 pro max!")
     addAndWriteMessage(
         "cutieneko", "the X pandemic really led to many great innovations")
-    responseOption = 0
+    responseOption, response = 0, ""
     while responseOption not in [1, 2]:
         responseOption, response = responseDecision(username,
-                                                    ["fr fr", "apple vision 60 pro max... is that the name of a new macintosh?"])
+                                                    ["fr fr", "apple vision 60 pro max"
+                                                     "... is that the name of a new ma"
+                                                     "cintosh?"])
     messages.append(response)
     howAboutYou() if responseOption == 1 else talkingAbout2112()
 
@@ -130,10 +142,12 @@ def chatBeginning():
     title()
     addAndWriteMessage(
         "cutieneko", "hey sweetheart <3 i see u r new to this platform")
-    responseOption = 0
+    responseOption, response = 0, ""
     while responseOption not in [1, 2]:
         responseOption, response = responseDecision(username,
-                                                    ["Yeah i'm pretty new to this. Any tips for me to use this platform?",
+                                                    ["Yeah i'm pretty new to this. Any"
+                                                     " tips for me to use this platfor"
+                                                     "m?",
                                                      "I mean yeah it is still beta"])
     messages.append(response)
     match responseOption:

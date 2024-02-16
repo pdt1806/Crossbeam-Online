@@ -2,8 +2,7 @@ from utils import messageLine, responseDecision, write, enterToContinue, cls, ti
 
 ending = False
 
-messages = []
-
+messages = [] # data abstraction
 
 def addAndWriteMessage(username, message):
   messages.append(messageLine(username, message))
@@ -27,12 +26,10 @@ def fishJibIntro():
   addAndWriteMessage(username, "Eh, it's not that impressive")
   addAndWriteMessage("FishJib123",
                      "Anyway, I can't believe it's almost the year 2000!")
-  addAndWriteMessage(username, "What? It's 2024")
-  addAndWriteMessage("FishJib123", "Hahaha funny joke!")
-  addAndWriteMessage(username, "No, I'm serious")
-  addAndWriteMessage("FishJib123", "What?")
+  addAndWriteMessage(username, "What?")
+  addAndWriteMessage("FishJib123", "Huh?")
   responseOption, response = responseDecision(
-      username, ["It's literally February of 2024 rn", "nvm"])
+      username, ["Are you joking?", "nvm"])
   messages.append(response)
   while True:
     if responseOption == 1:
@@ -43,14 +40,13 @@ def fishJibIntro():
       break
     else:
       responseOption, response = responseDecision(
-          username, ["It's literally February of 2024 rn", "nvm"])
+          username, ["Are you joking?", "nvm"])
       continue
 
 
 def convinceFishJib():
   continuousMessages()
-  addAndWriteMessage("FishJib123", "Stop messing with me.")
-  addAndWriteMessage("FishJib123", "That's not funny.")
+  addAndWriteMessage("FishJib123", "I'm not?")
   responseOption, response = responseDecision(username,
                                               ["You're not funny", "Whatever"])
 

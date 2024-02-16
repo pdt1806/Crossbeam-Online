@@ -7,6 +7,7 @@ def accountTerminated():
   cls()
   title()
   write(
-      "YOUR ACCOUNT HAS BEEN TERMINATED!\n\nReason: Mention of inappropriate topics"
+      "YOUR ACCOUNT HAS BEEN TERMINATED!\n\nReason: Mention of inappropriate topic(s)"
   )
+  print("")
   enterToContinue()

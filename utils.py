@@ -72,7 +72,8 @@ def usernameGet():
     while True:
         if username == "FishJib123" or username == "cutieneko":
             write(
-                "\nThis temporary username is currently being used. Please try another.")
+                "\nThis temporary username is currently being used. Please try another."
+            )
             username = input("\n\nUSERNAME: ")
             continue
         if username == "":

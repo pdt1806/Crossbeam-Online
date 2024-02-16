@@ -6,7 +6,8 @@ from time import sleep
 def intro():
   storyTitle()
   write(
-      "The year is 2024. After signing up for to beta test for new messaging platform, you receive an email.\n\n"
+      "The year is 2024. After signing up for to beta test for new messaging platform,"
+    " you receive an email.\n\n"
   )
   start = options(["Open it", "Ignore it"])
   while True:
@@ -21,7 +22,8 @@ def intro():
   cls()
   storyTitle()
   write(
-      "From: CrossTeam\n\n    Thank you for signing up! Please download the following attachment.\n\n(This email has 1 attachment)\n\n"
+      "From: CrossTeam\n\n    Thank you for signing up! Please download the following "
+    "attachment.\n\n(This email has 1 attachment)\n\n"
   )
   input("Hit Enter to download this file.")
   cls()
@@ -35,7 +37,8 @@ def intro():
   cls()
   title()
   write(
-      "Welcome to the beta version of Crossbeam Online!\n\nPlease enter a username. This will be seen by others."
+      "Welcome to the beta version of Crossbeam Online!\n\nPlease enter a username. Th"
+    "is will be seen by others."
   )
   username = usernameGet()
   write(
